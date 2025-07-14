@@ -1,0 +1,31 @@
+{
+  "anthemSegments": [
+    {
+      "id": "genesis_intro",
+      "name": "Genesis Invocation",
+      "timing": "00:00–00:30",
+      "scriptureVerse": "Genesis 17:20",
+      "musicalKey": "C Major",
+      "emotionTag": "Hopeful",
+      "instrumentation": ["Harp", "Ambient Synth"]
+    },
+    {
+      "id": "builder_blessing",
+      "name": "Hands of Heaven",
+      "timing": "00:31–01:15",
+      "scriptureVerse": "Exodus 31:2",
+      "musicalKey": "D Minor",
+      "emotionTag": "Sacred Labor",
+      "instrumentation": ["Hammer Percussion", "Choral Layer"]
+    },
+    {
+      "id": "peace_transmission",
+      "name": "One Nation Scroll",
+      "timing": "01:16–02:00",
+      "scriptureVerse": "Quran 49:13",
+      "musicalKey": "F Major",
+      "emotionTag": "Unity",
+      "instrumentation": ["Violin", "Interfaith Choir"]
+    }
+  ]
+}

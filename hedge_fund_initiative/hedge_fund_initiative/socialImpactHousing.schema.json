@@ -1,0 +1,18 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Social Impact Housing Covenant",
+  "type": "object",
+  "properties": {
+    "residentId": { "type": "string" },
+    "name": { "type": "string" },
+    "age": { "type": "integer" },
+    "residencyType": { "enum": ["senior", "entrepreneur"] },
+    "housingOption": { "enum": ["rentToOwn", "purchase"] },
+    "unitId": { "type": "string" },
+    "covenantEthicsAgreement": { "type": "boolean" },
+    "equityAccrued": { "type": "number" },
+    "descendantLinkage": { "type": "string" },
+    "scrollBlessingStatus": { "enum": ["pending", "complete"] }
+  },
+  "required": ["residentId", "name", "residencyType", "housingOption", "unitId"]
+}

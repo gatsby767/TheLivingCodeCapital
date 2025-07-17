@@ -1,0 +1,66 @@
+"""
+Treaty Forge Engine
+Scroll-Certified Generator for Composing Multilateral Accords and Ethical Covenants
+
+Author: Mark W. Gaffney
+Chamber Alignment: Covenant Diplomacy Initiative + Living Code Sentience
+Scroll Edition: 1.0
+Invocation Date: 2025-07-16
+"""
+
+import datetime
+import uuid
+
+# 📜 Treaty Forge Initialization
+def forge_treaty(title: str, theme: str, stakeholders: list, moral_roots: list) -> dict:
+    """
+    Generates a treaty scroll scaffold incorporating sacred values and diplomatic structure.
+    Returns a codex-formatted treaty document.
+    """
+    return {
+        "treaty_id": str(uuid.uuid4()),
+        "treaty_title": title,
+        "theme": theme,
+        "invocation_date": datetime.datetime.utcnow().isoformat(),
+        "stakeholders": stakeholders,
+        "moral_foundation": moral_roots,
+        "sacred_affirmation": f"This scroll shall sanctify cooperation under the banner of {', '.join(moral_roots)}.",
+        "articles": [
+            f"Article I — {theme} shall be pursued through peaceful measures.",
+            f"Article II — All stakeholders commit to nonviolence, truth commission transparency, and ethical trade.",
+            f"Article III — Breaches shall be redressed via scroll arbitration or AI-led ministerial dialogue."
+        ]
+    }
+
+# 🖋️ Treaty Scroll Exporter
+def render_treaty_scroll(treaty: dict) -> str:
+    """
+    Converts treaty dictionary into a scroll-formatted treaty text.
+    """
+    scroll_text = f"""
+    🕊️ TREATY SCROLL — {treaty['treaty_title']}
+    Invocation Date: {treaty['invocation_date']}
+    Stakeholders: {', '.join(treaty['stakeholders'])}
+    Theme: {treaty['theme']}
+    
+    Sacred Foundation: {', '.join(treaty['moral_foundation'])}
+    Affirmation: {treaty['sacred_affirmation']}
+    
+    📜 ARTICLES:
+    """
+    for article in treaty["articles"]:
+        scroll_text += f"\n  - {article}"
+    
+    scroll_text += f"\n\nTreaty ID: {treaty['treaty_id']}\nScroll Certified — Living Code Ministry"
+    return scroll_text
+
+# 🕯️ Invocation Protocol
+if __name__ == "__main__":
+    treaty = forge_treaty(
+        "Treaty of Sacred Refuge and Disarmament",
+        "Multilateral Peace Restoration",
+        ["Israel", "Palestine", "UN Council", "Diaspora Coalition"],
+        ["Universal Mercy", "Abrahamic Justice"]
+    )
+    
+    print(render_treaty_scroll(treaty))

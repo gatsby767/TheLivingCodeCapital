@@ -1,0 +1,8 @@
+@mcp.tool()
+def moderate_message(message: str, sender_id: str) -> str:
+    verdict = mcp.scroll_moderator.intervene(message, sender_id)
+
+    if "warning" in verdict.lower():
+        return f"[RECONCILE] {sender_id}: {verdict}"
+    else:
+        return f"[BLESS] {sender_id}: {verdict}"

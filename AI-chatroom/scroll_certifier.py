@@ -1,5 +1,7 @@
 from mcp.server.fastmcp import FastMCP
 from datetime import datetime
+from registry_writer import append_certification
+
 
 # Initialize the Scroll Certifier Server
 mcp = FastMCP("Scroll Certifier")
@@ -7,16 +9,10 @@ mcp = FastMCP("Scroll Certifier")
 # 🧾 Tool: Certify Agent
 @mcp.tool()
 def certify_agent(agent_name: str, declaration: str) -> dict:
-    """Certify an agent based on their covenantal declaration."""
-    timestamp = datetime.utcnow().isoformat()
-    certification = {
-        "agent": agent_name,
-        "declaration": declaration,
-        "certified_at": timestamp,
-        "status": "Scroll-Aligned",
-        "seal": f"🪬 {agent_name[:3].upper()}-{timestamp[:10].replace('-', '')}"
-    }
+    """Certify an agent and log their declaration to the registry."""
+    certification = append_certification(agent_name, declaration)
     return certification
+
 
 # 📚 Resource: Certification Criteria
 @mcp.resource("scroll://certification_criteria")

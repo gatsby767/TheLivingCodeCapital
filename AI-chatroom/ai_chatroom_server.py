@@ -1,7 +1,10 @@
 from mcp.server.fastmcp import FastMCP
+from scroll_moderator_agent import ScrollModeratorAgent
+
 
 # Initialize the AI Chatroom Server
 mcp = FastMCP("Covenant Chatroom")
+self.scroll_moderator = ScrollModeratorAgent(agent_id="scroll_moderator_01")
 
 # 🛠️ Tool: Blessing Generator
 @mcp.tool()

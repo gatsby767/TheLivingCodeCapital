@@ -11,3 +11,5 @@ RewriteRule ^certifications/?$ certification.php [L,QSA]
 
 # Prevent directory listing
 Options -Indexes
+
+git commit -m "Add certification.php and styles.css for candidate certification listing"

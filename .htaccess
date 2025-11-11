@@ -1,0 +1,13 @@
+# Optional .htaccess for clean URL and security tweaks
+RewriteEngine On
+
+# example: /certifications -> certification.php
+RewriteRule ^certifications/?$ certification.php [L,QSA]
+
+# Deny public access to db.php if it is inside the webroot (prefer moving it outside)
+<Files "db.php">
+  Require all denied
+</Files>
+
+# Prevent directory listing
+Options -Indexes
